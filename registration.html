@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration | TECHNOVA 1.0</title>
+
+    <link rel="stylesheet" href="css/registration.css">
+</head>
+
+<body>
+
+<div class="background-animation">
+    <div class="grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div id="particles"></div>
+</div>
+
+
+<header class="topbar">
+
+    <a href="index.html" class="brand">
+        <img src="assets/images/logo.png" alt="College Logo">
+
+        <div>
+            <strong>TECHNOVA 1.0</strong>
+            <span>SRMV COLLEGE</span>
+        </div>
+    </a>
+
+    <a href="index.html" class="back-btn">
+        ← BACK TO HOME
+    </a>
+
+</header>
+
+
+<main class="registration-container">
+
+    <section class="registration-heading">
+
+        <span class="small-label">
+            TECHNOVA 1.0
+        </span>
+
+        <h1>
+            EVENT
+            <span>REGISTRATION</span>
+        </h1>
+
+        <p>
+            Complete your details and choose your challenge.
+        </p>
+
+    </section>
+
+
+    <form id="registrationForm" novalidate>
+
+
+        <!-- ==============================
+             01 PERSONAL DETAILS
+        =============================== -->
+
+        <section class="form-section">
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    01
+                </div>
+
+                <div>
+                    <h2>PERSONAL DETAILS</h2>
+                    <p>Tell us who you are</p>
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="field">
+
+                    <label for="fullName">
+                        FULL NAME *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+
+                    <small class="error"></small>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="registerNo">
+                        REGISTER NUMBER *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerNo"
+                        name="registerNo"
+                        placeholder="Enter your register number"
+                        required
+                    >
+
+                    <small class="error"></small>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="mobile">
+                        MOBILE NUMBER *
+                    </label>
+
+                    <div class="mobile-input">
+
+                        <span>+91</span>
+
+                        <input
+                            type="tel"
+                            id="mobile"
+                            name="mobile"
+                            maxlength="10"
+                            inputmode="numeric"
+                            placeholder="10-digit mobile number"
+                            autocomplete="tel"
+                            required
+                        >
+
+                    </div>
+
+                    <small class="error"></small>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="email">
+                        EMAIL ID *
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+
+                    <small class="error"></small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             02 ACADEMIC DETAILS
+        =============================== -->
+
+        <section class="form-section">
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    02
+                </div>
+
+                <div>
+                    <h2>ACADEMIC DETAILS</h2>
+                    <p>Tell us about your studies</p>
+                </div>
+
+            </div>
+
+
+            <div class="academic-block">
+
+                <label class="group-label">
+                    QUALIFICATION *
+                </label>
+
+
+                <div class="qualification-options">
+
+                    <label class="choice-card">
+
+                        <input
+                            type="radio"
+                            name="qualification"
+                            value="UG"
+                        >
+
+                        <span class="choice-content">
+
+                            <strong>UG</strong>
+
+                            <small>
+                                Under Graduate
+                            </small>
+
+                        </span>
+
+                    </label>
+
+
+                    <label class="choice-card">
+
+                        <input
+                            type="radio"
+                            name="qualification"
+                            value="PG"
+                        >
+
+                        <span class="choice-content">
+
+                            <strong>PG</strong>
+
+                            <small>
+                                Post Graduate
+                            </small>
+
+                        </span>
+
+                    </label>
+
+                </div>
+
+                <small
+                    class="error"
+                    id="qualificationError"
+                ></small>
+
+            </div>
+
+
+    
+        </section>
+
+
+
+        <!-- ==============================
+             03 EVENT
+        =============================== -->
+
+        <section class="form-section event-section">
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    03
+                </div>
+
+                <div>
+                    <h2>CHOOSE YOUR EVENT</h2>
+                    <p>Select your challenge</p>
+                </div>
+
+            </div>
+
+
+            <div class="events-grid">
+
+
+                <label class="event-card">
+
+                    <input
+                        type="radio"
+                        name="event"
+                        value="Debugging"
+                    >
+
+                    <span class="event-content">
+
+                        <span class="event-number">
+                            01
+                        </span>
+
+                        <span class="event-text">
+
+                            <strong>
+                                Debugging
+                            </strong>
+
+                            <small>
+                                Find it. Fix it. Win it.
+                            </small>
+
+                        </span>
+
+                        <span class="check">
+                            ✓
+                        </span>
+
+                    </span>
+
+                </label>
+
+
+
+                <label class="event-card">
+
+                    <input
+                        type="radio"
+                        name="event"
+                        value="AI - Application Development"
+                    >
+
+                    <span class="event-content">
+
+                        <span class="event-number">
+                            02
+                        </span>
+
+                        <span class="event-text">
+
+                            <strong>
+                                AI - Application Development
+                            </strong>
+
+                            <small>
+                                Build intelligent solutions.
+                            </small>
+
+                        </span>
+
+                        <span class="check">
+                            ✓
+                        </span>
+
+                    </span>
+
+                </label>
+
+
+
+                <label class="event-card">
+
+                    <input
+                        type="radio"
+                        name="event"
+                        value="Design using Canva"
+                    >
+
+                    <span class="event-content">
+
+                        <span class="event-number">
+                            03
+                        </span>
+
+                        <span class="event-text">
+
+                            <strong>
+                                Design using Canva
+                            </strong>
+
+                            <small>
+                                Create. Design. Inspire.
+                            </small>
+
+                        </span>
+
+                        <span class="check">
+                            ✓
+                        </span>
+
+                    </span>
+
+                </label>
+
+
+
+                <label class="event-card">
+
+                    <input
+                        type="radio"
+                        name="event"
+                        value="Jumble Words"
+                    >
+
+                    <span class="event-content">
+
+                        <span class="event-number">
+                            04
+                        </span>
+
+                        <span class="event-text">
+
+                            <strong>
+                                Jumble Words
+                            </strong>
+
+                            <small>
+                                Decode the challenge.
+                            </small>
+
+                        </span>
+
+                        <span class="check">
+                            ✓
+                        </span>
+
+                    </span>
+
+                </label>
+
+
+
+                <label class="event-card">
+
+                    <input
+                        type="radio"
+                        name="event"
+                        value="Ideation"
+                    >
+
+                    <span class="event-content">
+
+                        <span class="event-number">
+                            05
+                        </span>
+
+                        <span class="event-text">
+
+                            <strong>
+                                Ideation
+                            </strong>
+
+                            <small>
+                                Turn ideas into possibilities.
+                            </small>
+
+                        </span>
+
+                        <span class="check">
+                            ✓
+                        </span>
+
+                    </span>
+
+                </label>
+
+
+
+                <label class="event-card">
+
+                    <input
+                        type="radio"
+                        name="event"
+                        value="AI - Video Generator"
+                    >
+
+                    <span class="event-content">
+
+                        <span class="event-number">
+                            06
+                        </span>
+
+                        <span class="event-text">
+
+                            <strong>
+                                AI - Video Generator
+                            </strong>
+
+                            <small>
+                                Imagine it. Generate it.
+                            </small>
+
+                        </span>
+
+                        <span class="check">
+                            ✓
+                        </span>
+
+                    </span>
+
+                </label>
+
+            </div>
+
+
+            <small
+                class="error event-error"
+                id="eventError"
+            ></small>
+
+        </section>
+
+
+
+        <!-- ==============================
+             SUBMIT
+        =============================== -->
+
+        <section class="submit-section">
+
+            <div
+                id="formMessage"
+                class="form-message"
+            ></div>
+
+
+            <button
+                type="submit"
+                id="submitBtn"
+                class="submit-btn"
+            >
+
+                <span id="submitText">
+                    COMPLETE REGISTRATION
+                </span>
+
+                <span
+                    id="submitArrow"
+                    class="submit-arrow"
+                >
+                    →
+                </span>
+
+                <span
+                    id="loader"
+                    class="loader hidden"
+                ></span>
+
+            </button>
+
+
+            <p class="submit-note">
+                By registering, you confirm that the
+                information provided is correct.
+            </p>
+
+        </section>
+
+    </form>
+
+</main>
+
+
+<script src="js/registration.js"></script>
+</body>
+</html>

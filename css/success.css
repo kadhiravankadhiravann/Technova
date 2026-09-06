@@ -1,0 +1,638 @@
+/* =======================================
+   TECHNOVA 1.0 Success Page
+======================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+    color:#fff;
+
+    font-family:"Inter",sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            #101d48 0%,
+            #050816 45%
+        );
+
+}
+/* Animated Background */
+
+@keyframes bgMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+.background-animation{
+
+position:fixed;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+.grid{
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+linear-gradient(
+rgba(255,255,255,.025) 1px,
+transparent 1px),
+
+linear-gradient(
+90deg,
+rgba(255,255,255,.025) 1px,
+transparent 1px);
+
+background-size:55px 55px;
+
+mask-image:
+linear-gradient(
+to bottom,
+black,
+transparent 90%);
+
+animation:gridMove 20s linear infinite;
+
+}
+
+@keyframes gridMove{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(55px);
+}
+
+}
+
+.orb{
+
+position:absolute;
+
+border-radius:50%;
+
+filter:blur(100px);
+
+opacity:.30;
+
+animation:floatingOrb 10s ease-in-out infinite alternate;
+
+}
+
+.orb-one{
+
+width:400px;
+height:400px;
+
+background:#8b5cf6;
+
+left:-150px;
+
+top:15%;
+
+}
+
+.orb-two{
+
+width:450px;
+height:450px;
+
+background:#3b82f6;
+
+right:-180px;
+
+top:5%;
+
+animation-delay:-3s;
+
+}
+
+.orb-three{
+
+width:350px;
+height:350px;
+
+background:#ec4899;
+
+left:40%;
+
+bottom:-220px;
+
+animation-delay:-6s;
+
+}
+
+@keyframes floatingOrb{
+
+from{
+
+transform:
+translate3d(0,0,0)
+scale(1);
+
+}
+
+to{
+
+transform:
+translate3d(40px,-40px,0)
+scale(1.15);
+
+}
+
+}
+
+/* Wrapper */
+
+.success-wrapper{
+
+width:100%;
+display:flex;
+justify-content:center;
+padding:50px 20px;
+
+}
+
+/* Card */
+
+.success-card{
+
+width:100%;
+max-width:760px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.2);
+
+border-radius:25px;
+
+padding:40px;
+
+text-align:center;
+
+box-shadow:0 20px 60px rgba(0,0,0,.35);
+
+animation:cardUp .8s ease;
+
+}
+
+@keyframes cardUp{
+
+from{
+
+opacity:0;
+transform:translateY(70px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* Check Icon */
+
+.check-circle{
+
+width:110px;
+height:110px;
+
+margin:auto;
+
+border-radius:50%;
+
+background:#22c55e;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:#fff;
+
+font-size:52px;
+
+box-shadow:0 0 35px #22c55e;
+
+animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+.success-tag{
+
+margin-top:20px;
+color:#ffffff;
+letter-spacing:2px;
+text-transform:uppercase;
+font-weight:600;
+
+}
+
+.success-card h1{
+
+margin-top:15px;
+
+font-size:44px;
+
+font-weight:800;
+
+color:#fff;
+
+}
+
+.success-card h2{
+
+margin-top:10px;
+
+font-size:30px;
+
+color:#f8fafc;
+
+}
+
+.subtitle{
+
+margin-top:15px;
+
+color:#eef2ff;
+
+line-height:1.8;
+
+}
+
+/* Details */
+
+.details-card{
+
+margin-top:35px;
+
+background:rgba(255,255,255,.12);
+
+border-radius:18px;
+
+padding:25px;
+
+}
+
+.detail{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:16px 0;
+
+border-bottom:1px solid rgba(255,255,255,.15);
+
+}
+
+.detail:last-child{
+
+border-bottom:none;
+
+}
+
+.detail span{
+
+color:#e5e7eb;
+
+font-weight:500;
+
+}
+
+.detail span i{
+
+margin-right:8px;
+
+color:#facc15;
+
+}
+
+.detail strong{
+
+color:#fff;
+
+font-weight:700;
+
+}
+
+/* Quote */
+
+.quote{
+
+margin-top:30px;
+
+padding:18px;
+
+border-radius:12px;
+
+background:rgba(255,255,255,.10);
+
+color:#fff;
+
+font-weight:600;
+
+}
+
+.quote i{
+
+color:#facc15;
+
+margin-right:8px;
+
+}
+
+/* Buttons */
+
+.buttons{
+
+margin-top:35px;
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+text-decoration:none;
+
+padding:15px 32px;
+
+border-radius:50px;
+
+font-weight:600;
+
+transition:.35s;
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+}
+
+.home{
+
+background:
+linear-gradient(
+135deg,
+#76f7ff,
+#00eaff);
+
+color:#00151a;
+
+box-shadow:
+0 10px 35px
+rgba(0,234,255,.22);
+
+}
+
+.register{
+
+background:
+rgba(255,255,255,.05);
+
+border:1px solid
+rgba(255,255,255,.15);
+
+color:white;
+
+}
+
+.btn:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 15px 30px rgba(0,0,0,.3);
+
+}
+
+/* No Registration */
+
+.no-registration{
+
+display:none;
+
+text-align:center;
+
+background:#fff;
+
+padding:60px;
+
+border-radius:20px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.3);
+
+}
+
+.no-registration i{
+
+font-size:70px;
+
+color:#ef4444;
+
+margin-bottom:20px;
+
+}
+
+.no-registration h2{
+
+margin-bottom:15px;
+
+}
+
+.no-registration p{
+
+margin-bottom:25px;
+
+color:#666;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.success-card{
+
+background:
+
+linear-gradient(
+
+145deg,
+
+rgba(255,255,255,.07),
+
+rgba(255,255,255,.02)
+
+);
+
+border:
+
+1px solid
+
+rgba(255,255,255,.12);
+
+backdrop-filter:
+
+blur(18px);
+
+box-shadow:
+
+0 25px 70px
+
+rgba(0,0,0,.45);
+
+}
+
+.detail{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:8px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+.btn{
+
+justify-content:center;
+
+width:100%;
+
+}
+
+.check-circle{
+
+width:90px;
+height:90px;
+font-size:42px;
+
+}
+
+.success-wrapper{
+padding:35px 16px;
+}
+
+.success-card{
+padding:28px 22px;
+}
+
+.success-card h1{
+font-size:32px;
+}
+
+.success-card h2{
+font-size:22px;
+}
+
+.subtitle{
+font-size:14px;
+}
+
+.details-card{
+padding:20px 16px;
+margin-top:25px;
+}
+
+.detail{
+padding:13px 0;
+}
+
+.detail span{
+font-size:13px;
+}
+
+.no-registration{
+padding:40px 25px;
+width:100%;
+}
+
+}

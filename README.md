@@ -1,2 +1,2 @@
-# Technova
-Registration
+# TECHNOVA
+Registration Form
